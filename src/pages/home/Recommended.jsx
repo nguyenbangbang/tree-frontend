@@ -49,7 +49,7 @@ const Recommended = () => {
             >
 
                {
-               trees.length > 0 && trees.slice(1,9).map((tree, index) => (
+               trees.length > 0 && trees.slice(3,15).map((tree, index) => (
                 <SwiperSlide key={index}>
                     <TreeCard tree={tree} />
                 </SwiperSlide>))        

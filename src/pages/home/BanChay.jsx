@@ -17,7 +17,7 @@ import { useFetchAllTreesQuery } from '../../redux/features/trees/treesApi';
 const removeVietnameseTones = (str) => {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 };
-const categories = [, "Trong nhà", "Mọng nước", "Có hoa", "Bonsai"]
+const categories = ["Chọn loại", "Trong nhà", "Mọng nước", "Có hoa", "Bonsai"]
 const BanChay = () => {
    
     const [selectedCategory, setSelectedCategory] = useState("Chọn loại");
