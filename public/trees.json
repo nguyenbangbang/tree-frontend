@@ -1,0 +1,172 @@
+[
+  {
+    "_id": 1,
+    "title": "Cây Lưỡi Hổ",
+    "description": "Loại cây dễ chăm sóc, lọc không khí tốt, phù hợp đặt trong phòng ngủ hoặc văn phòng.",
+    "category": "Trong nhà",
+    "trending": true,
+    "coverImage": "tree-1.png",
+    "oldPrice": 199000,
+    "newPrice": 149000
+  },
+  {
+    "_id": 2,
+    "title": "Cây Trầu Bà",
+    "description": "Cây leo xanh mướt, giúp thanh lọc không khí và mang lại cảm giác thư giãn.",
+    "category": "Trong nhà",
+    "trending": true,
+    "coverImage": "tree-2.png",
+    "oldPrice": 159000,
+    "newPrice": 109000
+  },
+  {
+    "_id": 3,
+    "title": "Cây Xương Rồng Tai Thỏ",
+    "description": "Loại xương rồng độc đáo, dễ chăm sóc, thích hợp trang trí bàn làm việc.",
+    "category": "Mọng nước",
+    "trending": false,
+    "coverImage": "tree-3.png",
+    "oldPrice": 99000,
+    "newPrice": 79000
+  },
+  {
+    "_id": 4,
+    "title": "Cây Lan Ý",
+    "description": "Cây có hoa trắng thanh lịch, giúp lọc khí độc như formaldehyde và benzene.",
+    "category": "Có hoa",
+    "trending": true,
+    "coverImage": "tree-4.png",
+    "oldPrice": 249000,
+    "newPrice": 199000
+  },
+  {
+    "_id": 5,
+    "title": "Cây Bonsai Tùng La Hán",
+    "description": "Biểu tượng của sự trường thọ và may mắn, thích hợp làm quà tặng.",
+    "category": "Bonsai",
+    "trending": true,
+    "coverImage": "tree-5.png",
+    "oldPrice": 499000,
+    "newPrice": 399000
+  },
+  {
+    "_id": 6,
+    "title": "Cây Sen Đá Nâu",
+    "description": "Sen đá nhỏ gọn, màu nâu độc đáo, phù hợp trang trí góc học tập.",
+    "category": "Mọng nước",
+    "trending": false,
+    "coverImage": "tree-6.png",
+    "oldPrice": 59000,
+    "newPrice": 49000
+  },
+  {
+    "_id": 7,
+    "title": "Cây Kim Ngân",
+    "description": "Cây phong thủy mang lại tài lộc, thường được đặt trong phòng khách hoặc văn phòng.",
+    "category": "Trong nhà",
+    "trending": true,
+    "coverImage": "tree-7.png",
+    "oldPrice": 299000,
+    "newPrice": 249000
+  },
+  {
+    "_id": 8,
+    "title": "Cây Dương Xỉ",
+    "description": "Cây xanh mát, giúp tăng độ ẩm không khí và làm dịu không gian sống.",
+    "category": "Trong nhà",
+    "trending": false,
+    "coverImage": "tree-8.png",
+    "oldPrice": 189000,
+    "newPrice": 139000
+  },
+  {
+    "_id": 9,
+    "title": "Cây Ngọc Bích",
+    "description": "Cây tượng trưng cho sự giàu có, dễ chăm sóc và sống lâu năm.",
+    "category": "Mọng nước",
+    "trending": true,
+    "coverImage": "tree-9.png",
+    "oldPrice": 99000,
+    "newPrice": 79000
+  },
+  {
+    "_id": 10,
+    "title": "Cây Phát Tài",
+    "description": "Cây phong thủy phổ biến, mang lại may mắn và thịnh vượng cho gia chủ.",
+    "category": "Trong nhà",
+    "trending": true,
+    "coverImage": "tree-10.png",
+    "oldPrice": 259000,
+    "newPrice": 199000
+  },
+  {
+  "_id": 11,
+  "title": "Hoa Lan Hồ Điệp",
+  "description": "Loài hoa sang trọng, thường dùng làm quà tặng hoặc trang trí nội thất cao cấp.",
+  "category": "Có hoa",
+  "trending": true,
+  "coverImage": "tree-11.png",
+  "oldPrice": 349000,
+  "newPrice": 289000
+},
+{
+  "_id": 12,
+  "title": "Bonsai Sanh Mini",
+  "description": "Cây bonsai dáng uốn lượn nghệ thuật, thích hợp trưng bày bàn làm việc hoặc phòng khách.",
+  "category": "Bonsai",
+  "trending": false,
+  "coverImage": "tree-12.png",
+  "oldPrice": 499000,
+  "newPrice": 429000
+},
+{
+  "_id": 13,
+  "title": "Cây Trầu Bà Đế Vương",
+  "description": "Lá to, màu xanh đậm sang trọng, giúp thanh lọc không khí và tạo điểm nhấn nội thất.",
+  "category": "Trong nhà",
+  "trending": true,
+  "coverImage": "tree-13.png",
+  "oldPrice": 229000,
+  "newPrice": 189000
+},
+{
+  "_id": 14,
+  "title": "Sen Đá Hồng Phấn",
+  "description": "Loại sen đá có màu hồng nhẹ, mang vẻ đẹp dịu dàng, thích hợp làm quà tặng.",
+  "category": "Mọng nước",
+  "trending": false,
+  "coverImage": "tree-14.png",
+  "oldPrice": 69000,
+  "newPrice": 59000
+},
+{
+  "_id": 15,
+  "title": "Cây Hồng Môn",
+  "description": "Cây có hoa đỏ rực rỡ, biểu tượng của tình yêu và sự nhiệt huyết, phù hợp trang trí phòng khách.",
+  "category": "Có hoa",
+  "trending": true,
+  "coverImage": "tree-15.png",
+  "oldPrice": 279000,
+  "newPrice": 229000
+},
+{
+  "_id": 16,
+  "title": "Bonsai Linh Sam",
+  "description": "Dáng cây uốn lượn mềm mại, lá nhỏ xanh mướt, mang vẻ đẹp cổ điển và tinh tế.",
+  "category": "Bonsai",
+  "trending": false,
+  "coverImage": "tree-16.png",
+  "oldPrice": 599000,
+  "newPrice": 499000
+},
+{
+  "_id": 17,
+  "title": "Cây Cau Tiểu Trâm",
+  "description": "Cây nhỏ gọn, lá xanh mát, giúp tăng độ ẩm không khí và tạo cảm giác thư giãn.",
+  "category": "Trong nhà",
+  "trending": true,
+  "coverImage": "tree-17.png",
+  "oldPrice": 199000,
+  "newPrice": 159000
+}
+]
