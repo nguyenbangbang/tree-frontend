@@ -25,7 +25,7 @@ const BanChay = () => {
     const  {data: trees =[]}=useFetchAllTreesQuery();
     
 
-        const filteredTrees  = selectedCategory === "" ? trees : trees.filter(tree =>removeVietnameseTones(tree.category) === removeVietnameseTones(selectedCategory)
+        const filteredTrees  = selectedCategory === "Chọn loại" ? trees : trees.filter(tree =>removeVietnameseTones(tree.category) === removeVietnameseTones(selectedCategory)
     );
 
     
