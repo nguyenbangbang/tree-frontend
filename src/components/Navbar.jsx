@@ -14,12 +14,6 @@ import { useAuth } from "../context/AuthContext";
 import { getImgUrl } from "../utils/getImgUrl";
 
 // Menu điều hướng cho dropdown
-const navigation = [
-  { name: "Dashboard", href: "/user-dashboard" },
-  { name: "Hóa đơn", href: "/orders" },
-  { name: "Giỏ hàng", href: "/cart" },
-  { name: "Thanh toán", href: "/checkout" },
-];
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -34,9 +28,22 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
+  const getNavigation = () => {
+    return [
+      { name: "Dashboard", href: "/user-dashboard" },
+      { name: "Hóa đơn", href: "/orders" },
+      { name: "Giỏ hàng", href: "/cart" },
+      {
+        name: "Thanh toán",
+        href: totalQuantity > 0 ? "/checkout" : "#",
+        disabled: totalQuantity === 0,
+      },
+    ];
+  };
+
   // Fetch dữ liệu cây từ file tĩnh hoặc API
   useEffect(() => {
-    fetch("http://localhost:5000/api/trees") 
+    fetch("http://localhost:5000/api/trees")
       .then((res) => {
         if (!res.ok) throw new Error("Không thể lấy dữ liệu cây");
         return res.json();
@@ -128,17 +135,24 @@ const Navbar = () => {
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
                     <ul className="py-2">
-                      {navigation.map((item) => (
+                      {getNavigation().map((item) => (
                         <li key={item.name}>
-                          <Link
-                            to={item.href}
-                            className="block px-4 py-2 text-sm hover:bg-gray-100"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            {item.name}
-                          </Link>
+                          {item.disabled ? (
+                            <span className="block px-4 py-2 text-sm text-gray-400 cursor-not-allowed">
+                              {item.name}
+                            </span>
+                          ) : (
+                            <Link
+                              to={item.href}
+                              className="block px-4 py-2 text-sm hover:bg-gray-100"
+                              onClick={() => setIsDropdownOpen(false)}
+                            >
+                              {item.name}
+                            </Link>
+                          )}
                         </li>
                       ))}
+
                       <li>
                         <button
                           onClick={handleLogOut}
@@ -162,14 +176,14 @@ const Navbar = () => {
             )}
           </div>
 
-          
-
           <Link
             to="/cart"
             className="bg-primary p-1 sm:px-6 px-2 flex items-center rounded-sm"
           >
             <HiOutlineShoppingCart />
-            <span className="text-sm font-semibold sm:ml-1">{totalQuantity}</span>
+            <span className="text-sm font-semibold sm:ml-1">
+              {totalQuantity}
+            </span>
           </Link>
         </div>
       </nav>
