@@ -25,6 +25,7 @@ const BanChay = () => {
 
   const { data: trees = [] } = useFetchAllTreesQuery();
 
+  // chọn loại
   const filteredTrees =
     selectedCategory === "Chọn loại"
       ? trees
