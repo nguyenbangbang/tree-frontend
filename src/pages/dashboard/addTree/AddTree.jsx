@@ -125,7 +125,7 @@ const AddTree = () => {
         {/* Submit Button */}
         <button type="submit" className="w-full py-2 bg-green-500 text-white font-bold rounded-md">
          {
-            isLoading ? <span className="">Adding.. </span> : <span>Add Tree</span>
+            isLoading ? <span className="">Adding.. </span> : <span>Thêm cây</span>
           }
         </button>
       </form>

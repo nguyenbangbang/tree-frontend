@@ -1,11 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import Swal from "sweetalert2";
 
-const savedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
-
 const initialState = {
-  cartItems: savedCart,
+  cartItems: [], // Luôn khởi tạo giỏ hàng trống
 };
+
 const cartSlice = createSlice({
   name: "cart",
   initialState,
@@ -16,7 +15,6 @@ const cartSlice = createSlice({
       );
 
       if (existingItem) {
-        // Nếu đã có, tăng số lượng
         existingItem.quantity += 1;
         Swal.fire({
           toast: true,
@@ -27,7 +25,6 @@ const cartSlice = createSlice({
           timer: 1500,
         });
       } else {
-        // Nếu chưa có, thêm mới với quantity = 1
         state.cartItems.push({ ...action.payload, quantity: 1 });
         Swal.fire({
           toast: true,
@@ -38,8 +35,6 @@ const cartSlice = createSlice({
           timer: 1500,
         });
       }
-
-      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
 
     removeFromCart: (state, action) => {
@@ -51,8 +46,8 @@ const cartSlice = createSlice({
           (i) => i._id !== action.payload._id
         );
       }
-      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
+
     clearCart: (state) => {
       state.cartItems = [];
     },

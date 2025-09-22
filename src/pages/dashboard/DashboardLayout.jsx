@@ -5,6 +5,7 @@ import Loading from "../../components/Loading";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { HiViewGridAdd } from "react-icons/hi";
 import { MdOutlineManageHistory } from "react-icons/md";
+import logo from "../../assets/footer-logo.png"
 
 const DashboardLayout = () => {
   const navigate = useNavigate();
@@ -20,30 +21,11 @@ const DashboardLayout = () => {
           href="/"
           className="inline-flex items-center justify-center h-20 w-20 bg-purple-600 hover:bg-purple-500 focus:bg-purple-500"
         >
-          <img src="/fav-icon.png" alt="" />
+          <img src={logo} alt="" />
         </a>
         <div className="flex-grow flex flex-col justify-between text-gray-500 bg-gray-800">
           <nav className="flex flex-col mx-4 my-6 space-y-4">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center py-3 hover:text-gray-400 hover:bg-gray-700 focus:text-gray-400 focus:bg-gray-700 rounded-lg"
-            >
-              <span className="sr-only">Folders</span>
-              <svg
-                aria-hidden="true"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="h-6 w-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-                />
-              </svg>
-            </a>
+            
             <Link
               to="/dashboard"
               className="inline-flex items-center justify-center py-3 text-purple-600 bg-white rounded-lg"
@@ -125,26 +107,7 @@ const DashboardLayout = () => {
               />
             </svg>
           </button>
-          <div className="relative w-full max-w-md sm:-ml-2">
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="absolute h-6 w-6 mt-2.5 ml-2 text-gray-400"
-            >
-              <path
-                fillRule="evenodd"
-                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <input
-              type="text"
-              role="search"
-              placeholder="Search..."
-              className="py-2 pl-10 pr-4 w-full border-4 border-transparent placeholder-gray-400 focus:bg-gray-50 rounded-lg"
-            />
-          </div>
+          
           <div className="flex flex-shrink-0 items-center ml-auto">
             <button className="inline-flex items-center p-2 hover:bg-gray-100 focus:bg-gray-100 rounded-lg">
               <span className="sr-only">User Menu</span>
@@ -166,25 +129,7 @@ const DashboardLayout = () => {
               </svg>
             </button>
             <div className="border-l pl-3 ml-3 space-x-1">
-              <button className="relative p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full">
-                <span className="sr-only">Notifications</span>
-                <span className="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
-                <span className="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
-                <svg
-                  aria-hidden="true"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="h-6 w-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                  />
-                </svg>
-              </button>
+              
               <button
                 onClick={handleLogout}
                 className="relative p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full"
@@ -214,7 +159,7 @@ const DashboardLayout = () => {
               <h1 className="text-4xl font-semibold mb-2">Dashboard</h1>
               <h2 className="text-gray-600 ml-0.5">Store Inventory</h2>
             </div>
-            <div className="flex flex-col md:flex-row items-start justify-end -mb-3">
+            <div className="flex flex-wrap gap-4 items-center justify-end mb-3">
               <Link
                 to="/dashboard/manage-trees"
                 className="inline-flex px-5 py-3 text-purple-600 hover:text-purple-700 focus:text-purple-700 hover:bg-purple-100 focus:bg-purple-100 border border-purple-600 rounded-md mb-3"
@@ -255,6 +200,48 @@ const DashboardLayout = () => {
                 </svg>
                 Add New Tree
               </Link>
+
+              <Link
+  to="/dashboard/manage-orders"
+  className="inline-flex px-5 py-3 text-green-600 hover:text-green-700 focus:text-green-700 hover:bg-green-100 focus:bg-green-100 border border-green-600 rounded-md mb-3"
+>
+  <svg
+    aria-hidden="true"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    className="flex-shrink-0 h-5 w-5 -ml-1 mt-0.5 mr-2"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M3 3h18M3 9h18M3 15h18M3 21h18"
+    />
+  </svg>
+  Manage Orders
+</Link>
+
+<Link
+  to="/dashboard/manage-accounts"
+  className="inline-flex px-5 py-3 text-blue-600 hover:text-blue-700 focus:text-blue-700 hover:bg-blue-100 focus:bg-blue-100 border border-blue-600 rounded-md ml-6 mb-3"
+>
+  <svg
+    aria-hidden="true"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    className="flex-shrink-0 h-6 w-6 text-blue-600 -ml-1 mr-2"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M5.121 17.804A4 4 0 0112 14a4 4 0 016.879 3.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+    />
+  </svg>
+  Manage Accounts
+</Link>
             </div>
           </div>
           <Outlet />
