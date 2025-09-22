@@ -30,7 +30,6 @@ const Navbar = () => {
 
   const getNavigation = () => {
     return [
-      { name: "Dashboard", href: "/user-dashboard" },
       { name: "Hóa đơn", href: "/orders" },
       { name: "Giỏ hàng", href: "/cart" },
       {
