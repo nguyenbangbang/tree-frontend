@@ -5,7 +5,7 @@ import Loading from "../../components/Loading";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { HiViewGridAdd } from "react-icons/hi";
 import { MdOutlineManageHistory } from "react-icons/md";
-import logo from "../../assets/footer-logo.png"
+import logo from "../../assets/footer-logo.png";
 
 const DashboardLayout = () => {
   const navigate = useNavigate();
@@ -25,7 +25,6 @@ const DashboardLayout = () => {
         </a>
         <div className="flex-grow flex flex-col justify-between text-gray-500 bg-gray-800">
           <nav className="flex flex-col mx-4 my-6 space-y-4">
-            
             <Link
               to="/dashboard"
               className="inline-flex items-center justify-center py-3 text-purple-600 bg-white rounded-lg"
@@ -107,7 +106,7 @@ const DashboardLayout = () => {
               />
             </svg>
           </button>
-          
+
           <div className="flex flex-shrink-0 items-center ml-auto">
             <button className="inline-flex items-center p-2 hover:bg-gray-100 focus:bg-gray-100 rounded-lg">
               <span className="sr-only">User Menu</span>
@@ -129,7 +128,6 @@ const DashboardLayout = () => {
               </svg>
             </button>
             <div className="border-l pl-3 ml-3 space-x-1">
-              
               <button
                 onClick={handleLogout}
                 className="relative p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full"
@@ -202,46 +200,46 @@ const DashboardLayout = () => {
               </Link>
 
               <Link
-  to="/dashboard/manage-orders"
-  className="inline-flex px-5 py-3 text-green-600 hover:text-green-700 focus:text-green-700 hover:bg-green-100 focus:bg-green-100 border border-green-600 rounded-md mb-3"
->
-  <svg
-    aria-hidden="true"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    className="flex-shrink-0 h-5 w-5 -ml-1 mt-0.5 mr-2"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      d="M3 3h18M3 9h18M3 15h18M3 21h18"
-    />
-  </svg>
-  Manage Orders
-</Link>
+                to="/dashboard/manage-orders"
+                className="inline-flex px-5 py-3 text-green-600 hover:text-green-700 focus:text-green-700 hover:bg-green-100 focus:bg-green-100 border border-green-600 rounded-md mb-3"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="flex-shrink-0 h-5 w-5 -ml-1 mt-0.5 mr-2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M3 3h18M3 9h18M3 15h18M3 21h18"
+                  />
+                </svg>
+                Manage Orders
+              </Link>
 
-<Link
-  to="/dashboard/manage-accounts"
-  className="inline-flex px-5 py-3 text-blue-600 hover:text-blue-700 focus:text-blue-700 hover:bg-blue-100 focus:bg-blue-100 border border-blue-600 rounded-md ml-6 mb-3"
->
-  <svg
-    aria-hidden="true"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    className="flex-shrink-0 h-6 w-6 text-blue-600 -ml-1 mr-2"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      d="M5.121 17.804A4 4 0 0112 14a4 4 0 016.879 3.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-    />
-  </svg>
-  Manage Accounts
-</Link>
+              <Link
+                to="/dashboard/manage-accounts"
+                className="inline-flex px-5 py-3 text-blue-600 hover:text-blue-700 focus:text-blue-700 hover:bg-blue-100 focus:bg-blue-100 border border-blue-600 rounded-md ml-6 mb-3"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="flex-shrink-0 h-6 w-6 text-blue-600 -ml-1 mr-2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5.121 17.804A4 4 0 0112 14a4 4 0 016.879 3.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                Manage Accounts
+              </Link>
             </div>
           </div>
           <Outlet />
