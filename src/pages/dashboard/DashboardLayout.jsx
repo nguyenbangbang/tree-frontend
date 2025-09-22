@@ -6,6 +6,7 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 import { HiViewGridAdd } from "react-icons/hi";
 import { MdOutlineManageHistory } from "react-icons/md";
 import logo from "../../assets/footer-logo.png";
+import RevenueChart from "./RevenueChart";
 
 const DashboardLayout = () => {
   const navigate = useNavigate();
@@ -218,27 +219,6 @@ const DashboardLayout = () => {
                   />
                 </svg>
                 Manage Orders
-              </Link>
-
-              <Link
-                to="/dashboard/manage-accounts"
-                className="inline-flex px-5 py-3 text-blue-600 hover:text-blue-700 focus:text-blue-700 hover:bg-blue-100 focus:bg-blue-100 border border-blue-600 rounded-md ml-6 mb-3"
-              >
-                <svg
-                  aria-hidden="true"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="flex-shrink-0 h-6 w-6 text-blue-600 -ml-1 mr-2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5.121 17.804A4 4 0 0112 14a4 4 0 016.879 3.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                Manage Accounts
               </Link>
             </div>
           </div>
